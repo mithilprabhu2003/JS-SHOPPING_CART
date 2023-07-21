@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOME</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/CSS/style.css" />
+  </head>
+  <body>
+    <!-- headrer-->
+    <header>
+      <nav class="navBar">
+        <h3 class="navBarHeading">MOBILE STORE</h3>
+        <i class="counter">0</i>
+        <!-- <a href="cart.html"><i class="bx bx-shopping-bag bagIcon"></i></a> -->
+        <button class="cartButton" type="button" onclick="show()">
+          <i class='bx bxs-shopping-bags bagIcon' ></i>
+        </button>
+      </nav>
+      <!-- <i class="bx bx-shopping-bag"></i> -->
+    </header>
+    
+
+    <div>
+      <p class="headingText">SHOPPING PRODUCTS</p>
+    </div>
+    
+    <!-- show cart bag  -->
+    <div id="toggleCart" class="hideCart">
+    <div class="mainContainer">
+      <table>
+          <thead>
+              <tr>
+                  <th>PRODUCT</th>
+                  <th>QUANTITY</th>
+                  <th>SUB TOTAL</th>
+              </tr>
+          </thead>
+          <tbody id="mainCard" class="insertBeforeCart">
+              
+          </tbody>
+      </table>
+      <!-- =========================== -->
+
+      <div class="totalPrice">
+          <table>
+              <tbody>
+                  <tr>
+                      <td>TOTAL</td>
+                      <td class="priceLeft">0</td>
+                  </tr>
+                  <tr>
+                      <td>BOOK NOW</td>
+                      <td><button type="button" onclick="booked()">BOOK</button></td>
+                  </tr> 
+                  </thead>
+          </table>
+      </div>
+  </div>
+</div>
+
+  <!--=====------------=======================================================-->
+
+    <!-- section  -->
+    
+    <!-- <div class="iframeContainer">
+      <iframe id="toggleCart" src="cart.html" title="cart" frameborder="0">XXXXX</iframe>
+    </div> -->
+    <section id="cardItemShow" class="container">
+      <div class="card">
+        <img
+          src="/IMAGES/IPHONE13.jpg"
+          class="cardImage"
+          alt="IPHONE 13 IMAGE"
+          title="IPHONE 13"
+        />
+        <div class="cardInfo">
+          <h3 class="cardHeading item1">I PHONE 14</h3>
+          <p class="cardData">
+            512 GB ROM<br>
+                6.1 inch Super Retina XDR Display
+                    </p>
+          <span class="itemPrice">120000₹</span>
+          <hr />
+          <button class="add" onclick="getItem()">Add</button>
+          <button
+            class="quantityBTN quantityBtnLowerBorder"
+            type="button"
+            onclick="homeIncreaseQuantity()"
+          >
+            ▲
+          </button>
+          <span id="data" class="quantityBTN data ">0</span>
+          <button
+            class="quantityBTN quantityBtnLowerBorder"
+            type="button"
+            onclick="homeDecreaseQuantity()"
+          >
+            ▼
+          </button>
+          <!-- <i class="bx bx-shopping-bag"></i> -->
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="/IMAGES/nothing.jpg"
+          class="cardImage"
+          alt="NOTHING IAMGE"
+          title="NOTHING"
+        />
+        <div class="cardInfo">
+          <h3 class="cardHeading item2">NOTHING</h3>
+          <p class="cardData">
+            8 GB RAM | 256 GB ROM<br>
+            50MP+50MP<br>
+          </p>
+          <span class="itemPrice">30000₹</span>
+          <hr />
+          <button class="add" onclick="getItem()">Add</button>
+          <button
+            class="quantityBTN quantityBtnLowerBorder"
+            type="button"
+            onclick="homeIncreaseQuantity()"
+          >
+            ▲
+          </button>
+          <span id="data" class="quantityBTN data">0</span>
+          <button
+            class="quantityBTN quantityBtnLowerBorder"
+            type="button"
+            onclick="homeDecreaseQuantity()"
+          >
+            ▼
+          </button>
+          <!-- <i class="bx bx-shopping-bag"></i> -->
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="/IMAGES/realme11pro.webp"
+          class="cardImage"
+          alt="REALME 11 PRO"
+          title="REALME 11 PRO"
+        />
+        <div class="cardInfo">
+          <h3 class="cardHeading item3">REALME 11 PRO </h3>
+          <p class="cardData">
+            8 GB RAM<br>
+            Dimensity 7050 Processor
+          </p>
+          <span class="itemPrice">22000₹</span>
+          <hr />
+          <button class="add" onclick="getItem()">Add</button>
+          <button
+            class="quantityBTN quantityBtnLowerBorder"
+            type="button"
+            onclick="homeIncreaseQuantity()"
+          >
+            ▲
+          </button>
+          <span id="data" class="quantityBTN data">0</span>
+          <button
+            class="quantityBTN quantityBtnLowerBorder"
+            type="button"
+            onclick="homeDecreaseQuantity()"
+          >
+            ▼
+          </button>
+          <!-- <i class="bx bx-shopping-bag"></i> -->
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="/IMAGES/VIVOT2X.webp  "
+          class="cardImage"
+          alt="VIVO T2X"
+          title="VIVO T2X"
+        />
+        <div class="cardInfo">
+          <h3 class="cardHeading item4">VIVO T2X 5G</h3>
+          <p class="cardData">
+            8 GB RAM <br>
+            128 GB ROM<br>
+          </p>
+          <span class="itemPrice">25000₹</span>
+          <hr />
+          <button class="add" onclick="getItem()">Add</button>
+          <button
+            class="quantityBTN quantityBtnLowerBorder"
+            type="button"
+            onclick="homeIncreaseQuantity()"
+          >
+            ▲
+          </button>
+          <span id="data" class="quantityBTN data">0</span>
+          <button
+            class="quantityBTN quantityBtnLowerBorder"
+            type="button"
+            onclick="homeDecreaseQuantity()"
+          >
+            ▼
+          </button>
+          <!-- <i class="bx bx-shopping-bag"></i> -->
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="/IMAGES/REALMENARZON55.jpg"
+          class="cardImage"
+          alt="REALME NARZO N55"
+          title="REALME NARZO N55"
+        />
+        <div class="cardInfo">
+          <h3 class="cardHeading item5">REALME NARZO N55</h3>
+          <p class="cardData">
+            6 GB RAM | 128 GB ROM<br>
+            33W SUPERVOOC charging<br>
+          </p>
+          <span class="itemPrice">15000₹</span>
+          <hr />
+          <button class="add" onclick="getItem()">Add</button>
+          <button
+            class="quantityBTN quantityBtnLowerBorder"
+            type="button"
+            onclick="homeIncreaseQuantity()"
+          >
+            ▲
+          </button>
+          <span id="data" class="quantityBTN data">0</span>
+          <button
+            class="quantityBTN quantityBtnLowerBorder"
+            type="button"
+            onclick="homeDecreaseQuantity()"
+          >
+            ▼
+          </button>
+          <!-- <i class="bx bx-shopping-bag"></i> -->
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="/IMAGES/VIVOZ1.jpg"
+          class="cardImage"
+          alt="VIVO Z1 PRO"
+          title="VIVO Z1 PRO"
+        />
+        <div class="cardInfo">
+          <h3 class="cardHeading item6">VIVO Z1 PRO</h3>
+          <p class="cardData">
+            4 GB RAM<br>
+            32MP Front Camera<br>
+          </p>
+          <span class="itemPrice">15000₹</span>
+          <hr />
+          <button class="add" onclick="getItem()">Add</button>
+          <button
+            class="quantityBTN quantityBtnLowerBorder"
+            type="button"
+            onclick="homeIncreaseQuantity()"
+          >
+            ▲
+          </button>
+          <span id="data" class="quantityBTN data">0</span>
+          <button
+            class="quantityBTN quantityBtnLowerBorder"
+            type="button"
+            onclick="homeDecreaseQuantity()"
+          >
+            ▼
+          </button>
+          <!-- <i class="bx bx-shopping-bag"></i> -->
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="/IMAGES/mi-11I.jpg"
+          class="cardImage"
+          alt="MI 11I"
+          title="MI 11I"
+        />
+        <div class="cardInfo">
+          <h3 class="cardHeading item7">MI 11I</h3>
+          <p class="cardData">
+            8 GB RAM <br>
+            108MP Rear Camera<br> 
+
+          </p>
+          <span class="itemPrice">18000₹</span>
+          <hr />
+          <button class="add" onclick="getItem()">Add</button>
+          <button
+            class="quantityBTN quantityBtnLowerBorder"
+            type="button"
+            onclick="homeIncreaseQuantity()"
+          >
+            ▲
+          </button>
+          <span id="data" class="quantityBTN data">0</span>
+          <button
+            class="quantityBTN quantityBtnLowerBorder"
+            type="button"
+            onclick="homeDecreaseQuantity()"
+          >
+            ▼
+          </button>
+          <!-- <i class="bx bx-shopping-bag"></i> -->
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="/IMAGES/ONEPLUS9PRO.jpg"
+          class="cardImage"
+          alt="ONEPLUS 9 PRO"
+          title="ONEPLUS 9 PRO"
+        />
+        <div class="cardInfo">
+          <h3 class="cardHeading item8">ONEPLUS9PRO</h3>
+          <p class="cardData">
+            8 GB RAM<br>
+            256 GB ROM<br> 
+          </p>
+          <span class="itemPrice">19000₹</span>
+          <hr />
+          <button class="add" onclick="getItem()">Add</button>
+          <button
+            class="quantityBTN quantityBtnLowerBorder"
+            type="button"
+            onclick="homeIncreaseQuantity()"
+          >
+            ▲
+          </button>
+          <span id="data" class="quantityBTN data">0</span>
+          <button
+            class="quantityBTN quantityBtnLowerBorder"
+            type="button"
+            onclick="homeDecreaseQuantity()"
+          >
+            ▼
+          </button>
+          <!-- <i class="bx bx-shopping-bag"></i> -->
+        </div>
+      </div>
+    </section>
+    <script src="/JS/script.js"></script>
+
+  </body>
+</html>
